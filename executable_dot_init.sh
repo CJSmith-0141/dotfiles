@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 echo "installing various things . . ."
 
+sudo tee /etc/hostname <<EndOfHostname
+ConnorGridcureDevBox
+EndOfHostname
+
 sudo apt-get -y install software-properties-common
 sudo add-apt-repository -y ppa:neovim-ppa/unstable
 sudo apt-get -y update
