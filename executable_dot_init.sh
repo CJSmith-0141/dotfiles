@@ -8,6 +8,9 @@ sudo apt-get -y install neovim
 sudo apt-get -y install cmake
 sudo apt-get -y install python-dev python-pip python3-dev python3-pip
 
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
