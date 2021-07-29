@@ -1,0 +1,19 @@
+{
+    "languageserver": {
+        "terraform": {
+            "command": "terraform-ls",
+            "args": [
+                "serve"
+            ],
+            "filetypes": [
+                "terraform",
+                "tf",
+                "hcl"
+            ],
+            "initializationOptions": {},
+            "settings": {}
+        }
+    },
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/home/csmith/.local/bin/black"
+}
