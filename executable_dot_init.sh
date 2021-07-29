@@ -27,7 +27,7 @@ nvim --headless +PlugInstall +qall
 nvim --headless +PlugUpdate +qall
 
 git clone https://github.com/jandamm/zgenom.git
-git clone git@github.com:unixorn/zsh-quickstart-kit.git
+git clone https://github.com/unixorn/zsh-quickstart-kit.git
 
 pushd . 
 cd zsh-quickstart-kit
