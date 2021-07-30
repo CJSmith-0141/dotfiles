@@ -12,8 +12,7 @@ sudo apt-get -y install neovim
 sudo apt-get -y install cmake
 sudo apt-get -y install python-dev python-pip python3-dev python3-pip
 sudo apt-get -y install zsh 
-
-chsh -s $(which zsh)
+sudp apt-get -y install stow
 
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -37,5 +36,10 @@ cd zsh-quickstart-kit
 stow --target=$HOME zsh
 popd
 
+mv p10k.remote.zsh ~/.p10k.zsh
+
 nvim --headless +PlugInstall +qall
 nvim --headless +PlugUpdate +qall
+
+sleep 90
+sudo reboot
