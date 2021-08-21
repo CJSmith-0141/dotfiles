@@ -1,0 +1,14 @@
+[core]
+    editor = nvim
+[user]
+    name = Connor James Smith
+    email = cjs.connor.smith@gmail.com
+    signingkey = 0x2AEE015F2058FAAD
+[commit]
+    gpgSign = true
+[pull]
+    rebase = false
+[credential]
+    helper = libsecret
+[init]
+    defaultBranch = main
