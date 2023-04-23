@@ -27,6 +27,7 @@ M.telescope = {
     ["<leader>ff"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "find in current buffer" },
     ["<leader>fz"] = { "<cmd> Telescope find_files <CR>", "find files" },
     ["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "live grep" },
+    ["<leader>ft"] = { "<cmd> Telescope git_files <CR>", "search git files" },
   }
 }
 
@@ -57,6 +58,5 @@ M.tabufline = {
     },
   },
 }
--- more keybinds!
 
 return M

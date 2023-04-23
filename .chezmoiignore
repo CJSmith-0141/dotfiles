@@ -1,2 +1,2 @@
-.config/nvim/.git
-.config/nvim/.github
+.config/nvim/.git/*
+.config/nvim/.github/*
