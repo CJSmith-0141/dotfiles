@@ -18,6 +18,14 @@ autocmd("FileType", {
   group = nvim_metals_group,
 })
 
+local highlight_yank = vim.api.nvim_create_augroup('highlight_yank', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  pattern = '*',
+  callback = function ()
+    require'vim.highlight'.on_yank()
+  end,
+  group = highlight_yank,
+})
 -- Auto resize panes when resizing nvim window
 -- autocmd("VimResized", {
 --   pattern = "*",
