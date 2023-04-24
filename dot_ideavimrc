@@ -1,0 +1,44 @@
+set guicursor=
+set noshowmatch
+set hidden
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set nu
+set nowrap
+set smartcase
+set noswapfile
+set nobackup
+set modeline
+set showmode
+
+let mapleader = " "
+
+nnoremap <leader>h  <C-W><C-H>
+nnoremap <leader>j  <C-W><C-J>
+nnoremap <leader>k  <C-W><C-K>
+nnoremap <leader>l  <C-W><C-L>
+nnoremap <leader>oo <C-W><C-O>
+
+nnoremap <leader>%    :action SplitVertically<CR>
+nnoremap <leader>"    :action SplitHorizontally<CR>
+nnoremap <leader><CR> :source ~/.ideavimrc<CR>
+
+nnoremap <leader>fz   :action SearchEverywhere<CR>
+nnoremap <leader>nt   :action NextTab<CR>
+nnoremap <leader>pt   :action PreviousTab<CR>
+nnoremap <leader>cb   :action Build<CR>
+nnoremap <leader>gd   :action GotoDeclaration<CR>
+nnoremap <leader>ha   :action HideAllWindows<CR>
+nnoremap <leader>cq   :action HideActiveWindow<CR>
+nnoremap <leader>gq   :action QuickJavaDoc<CR>
+nnoremap <leader>rr   :action Debug<CR>
+nnoremap <leader>rp   :action Stop<CR>
+nnoremap <leader>ep   :action ToggleLineBreakpoint<CR>
+vnoremap <leader>//   :s/^/\/\//g<CR>
+vnoremap <leader>/u   :s/^\/\///g<CR>
+vnoremap <leader>##   :s/^ /#/g<CRk
+vnoremap <leader>#u   :s/^#/ /g<CR>
+nnoremap <leader>rl   :set relativenumber!<CR>

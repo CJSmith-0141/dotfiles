@@ -26,6 +26,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
   group = highlight_yank,
 })
+
+vim.opt.rnu = true
 -- Auto resize panes when resizing nvim window
 -- autocmd("VimResized", {
 --   pattern = "*",

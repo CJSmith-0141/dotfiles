@@ -15,6 +15,7 @@ M.treesitter = {
     "scala",
     "python",
     "rust",
+    "terraform"
   },
   indent = {
     enable = true,
