@@ -1,0 +1,9 @@
+# /Users/csmith/.config/tmuxinator/edi.yml
+
+name: edi
+root: ~/edi-core
+
+pre_window: source ~/edi-core/.venv/bin/activate
+
+windows:
+  - editor: nvim

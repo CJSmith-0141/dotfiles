@@ -1,0 +1,8 @@
+# /Users/csmith/.config/tmuxinator/docs.yml
+
+name: docs
+root: ~/world/docs
+windows:
+  - editor: nvim
+  - docs: cd ~/world/docs && source .venv/bin/activate && mkdocs serve
+  - swagger: cd ~/swagger-editor && npm run dev
