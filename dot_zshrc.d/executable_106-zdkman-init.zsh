@@ -1,2 +1,2 @@
 #! /usr/bin/zsh
-[[ -s "/home/csmith/.sdkman/bin/sdkman-init.sh" ]] && source "/home/csmith/.sdkman/bin/sdkman-init.sh"
+[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"

@@ -28,6 +28,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.opt.rnu = true
+vim.opt.swapfile = false
 -- Auto resize panes when resizing nvim window
 -- autocmd("VimResized", {
 --   pattern = "*",
