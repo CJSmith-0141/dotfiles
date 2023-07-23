@@ -55,7 +55,9 @@ local plugins = {
     lazy = false,
     dependencies = {
       {
-        "nvim-lua/plenary.nvim"
+        "nvim-lua/plenary.nvim",
+        "mfussenegger/nvim-dap",
+        "rcarriga/nvim-dap-ui",
       }
     }
   },
@@ -63,6 +65,7 @@ local plugins = {
     "tpope/vim-fugitive",
     cmd = "G"
   },
+
 
   -- To make a plugin not be loaded
   -- {

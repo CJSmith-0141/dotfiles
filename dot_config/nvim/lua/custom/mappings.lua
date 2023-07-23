@@ -13,7 +13,7 @@ M.disabled = {
     ["gd"] = "",
     ["gD"] = "",
     ["gi"] = "",
-  }
+  },
 }
 
 M.general = {
@@ -31,7 +31,7 @@ M.telescope = {
     ["<leader>fz"] = { "<cmd> Telescope find_files <CR>", "find files" },
     ["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "live grep" },
     ["<leader>ft"] = { "<cmd> Telescope git_files <CR>", "search git files" },
-  }
+  },
 }
 
 M.tabufline = {
@@ -62,8 +62,7 @@ M.tabufline = {
   },
 }
 
-M.lspconfig = {
-  plugin = true,
+M.metals = {
   n = {
     ["<leader>gD"] = {
       function()
@@ -83,7 +82,83 @@ M.lspconfig = {
       end,
       "lsp implementation",
     },
-  }
+    ["<leader>gr"] = {
+      function()
+        vim.lsp.buf.references()
+      end,
+      "lsp references",
+    },
+    ["<leader>gq"] = {
+      function()
+        vim.lsp.buf.hover()
+      end,
+      "lsp documentation",
+    },
+    ["<leader>cl"] = {
+      function()
+        vim.lsp.codelens.run()
+      end,
+      "run the code",
+    },
+    ["<leader>nn"] = {
+      function()
+        vim.lsp.buf.rename()
+      end,
+      "run the code",
+    },
+  },
+}
+
+M.dap = {
+  n = {
+    ["<leader>dc"] = {
+      function()
+        require("dap").continue()
+      end,
+      "dap continue",
+    },
+    ["<leader>dr"] = {
+      function()
+        require("dap").repl.toggle()
+      end,
+      "dap toggle repl",
+    },
+
+    ["<leader>dK"] = {
+      function()
+        require("dap.ui.widgets").hover()
+      end,
+      "dap widgets (ui only)",
+    },
+
+    ["<leader>dt"] = {
+      function()
+        require("dap").toggle_breakpoint()
+      end,
+      "dap toggle breakpoint",
+    },
+
+    ["<leader>dso"] = {
+      function()
+        require("dap").step_over()
+      end,
+      "dap step over",
+    },
+
+    ["<leader>dsi"] = {
+      function()
+        require("dap").step_into()
+      end,
+      "dap step into",
+    },
+
+    ["<leader>dl"] = {
+      function()
+        require("dap").run_last()
+      end,
+      "dap run last",
+    },
+  },
 }
 
 return M
