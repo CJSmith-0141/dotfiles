@@ -1,5 +1,0 @@
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
-export PATH="/opt/homebrew/opt/node@16/bin/:$PATH"
-eval "$(pyenv init -)"

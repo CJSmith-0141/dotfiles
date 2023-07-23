@@ -10,6 +10,9 @@ M.disabled = {
     ["<leader>fw"] = "",
     ["<tab>"] = "",
     ["<S-tab>"] = "",
+    ["gd"] = "",
+    ["gD"] = "",
+    ["gi"] = "",
   }
 }
 
@@ -57,6 +60,30 @@ M.tabufline = {
       "close buffer",
     },
   },
+}
+
+M.lspconfig = {
+  plugin = true,
+  n = {
+    ["<leader>gD"] = {
+      function()
+        vim.lsp.buf.declaration()
+      end,
+      "lsp declaration",
+    },
+    ["<leader>gd"] = {
+      function()
+        vim.lsp.buf.definition()
+      end,
+      "lsp definition",
+    },
+    ["<leader>gi"] = {
+      function()
+        vim.lsp.buf.implementation()
+      end,
+      "lsp implementation",
+    },
+  }
 }
 
 return M
