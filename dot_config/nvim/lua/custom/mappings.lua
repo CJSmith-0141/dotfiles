@@ -158,6 +158,12 @@ M.dap = {
       end,
       "dap run last",
     },
+    ["<leader>dui"] = {
+      function()
+        require("dapui").toggle()
+      end,
+      "dap open dapui",
+    },
   },
 }
 
