@@ -1,0 +1,22 @@
+[font]
+size = 15.0
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.normal]
+family = "GeistMono Nerd Font"
+
+[font.offset]
+x = 0
+y = 0
+
+[window]
+decorations = "full"
+startup_mode = "Windowed"
+title = "terminal"
+
+[window.dimensions]
+columns = 0
+lines = 0

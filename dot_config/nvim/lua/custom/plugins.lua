@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -25,7 +25,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -48,7 +48,7 @@ local plugins = {
   },
   {
     "nvim-telescope/telescope.nvim",
-    opts = overrides.telescope
+    opts = overrides.telescope,
   },
   {
     "scalameta/nvim-metals",
@@ -58,21 +58,63 @@ local plugins = {
         "nvim-lua/plenary.nvim",
         "mfussenegger/nvim-dap",
         "rcarriga/nvim-dap-ui",
-      }
-    }
+      },
+    },
   },
   {
     "tpope/vim-fugitive",
-    cmd = "G"
+    cmd = "G",
   },
-
-
+  {
+    "ellisonleao/gruvbox.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- Default options:
+      require("gruvbox").setup {
+        terminal_colors = true, -- add neovim terminal colors
+        undercurl = true,
+        underline = true,
+        bold = true,
+        italic = {
+          strings = true,
+          emphasis = true,
+          comments = true,
+          operators = false,
+          folds = true,
+        },
+        strikethrough = true,
+        invert_selection = false,
+        invert_signs = false,
+        invert_tabline = false,
+        invert_intend_guides = false,
+        inverse = true, -- invert background for search, diffs, statuslines and errors
+        contrast = "soft", -- can be "hard", "soft" or empty string
+        palette_overrides = {},
+        overrides = {},
+        dim_inactive = true,
+        transparent_mode = true,
+      }
+      vim.cmd "colorscheme gruvbox"
+    end,
+  },
+  {
+    "github/copilot.vim",
+    lazy = false
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
   --   enabled = false
   -- },
 
+  -- All NvChad plugins are lazy-loaded by default
+  -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`
+  -- If you want a plugin to load on startup, add `lazy = false` to a plugin spec, for example
+  -- {
+  --   "mg979/vim-visual-multi",
+  --   lazy = false,
+  -- }
 }
 
 return plugins

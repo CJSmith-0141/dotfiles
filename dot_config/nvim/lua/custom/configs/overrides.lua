@@ -11,11 +11,11 @@ M.treesitter = {
     "tsx",
     "c",
     "markdown",
-    "markdown_inline",
     "scala",
     "python",
     "rust",
-    "terraform"
+    "terraform",
+    "markdown_inline",
   },
   indent = {
     enable = true,

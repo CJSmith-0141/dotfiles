@@ -1,4 +1,4 @@
---@type MappingsTable
+---@type MappingsTable
 local M = {}
 
 M.disabled = {
@@ -31,34 +31,6 @@ M.telescope = {
     ["<leader>fz"] = { "<cmd> Telescope find_files <CR>", "find files" },
     ["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "live grep" },
     ["<leader>ft"] = { "<cmd> Telescope git_files <CR>", "search git files" },
-  },
-}
-
-M.tabufline = {
-  plugin = true,
-
-  n = {
-    -- cycle through buffers
-    ["gt"] = {
-      function()
-        require("nvchad_ui.tabufline").tabuflineNext()
-      end,
-      "goto next buffer",
-    },
-
-    ["gT"] = {
-      function()
-        require("nvchad_ui.tabufline").tabuflinePrev()
-      end,
-      "goto prev buffer",
-    },
-    -- close buffer + hide terminal buffer
-    ["<leader>x"] = {
-      function()
-        require("nvchad_ui.tabufline").close_buffer()
-      end,
-      "close buffer",
-    },
   },
 }
 
@@ -163,6 +135,17 @@ M.dap = {
         require("dapui").toggle()
       end,
       "dap open dapui",
+    },
+  },
+}
+
+M.tabufline = {
+  n = {
+    ["<leader>tt"] = {
+      function()
+        require("nvchad.tabufline").tabuflineNext()
+      end,
+      "tabufline next buffer",
     },
   },
 }
