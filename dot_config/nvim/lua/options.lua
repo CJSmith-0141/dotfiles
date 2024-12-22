@@ -1,3 +1,9 @@
+require "nvchad.options"
+
+-- add yours here!
+
+-- local o = vim.o
+-- o.cursorlineopt ='both' -- to enable cursorline!
 local autocmd = vim.api.nvim_create_autocmd
 autocmd({ "WinLeave" }, {
   callback = function()
@@ -15,13 +21,13 @@ autocmd("FileType", {
     metals_config.settings = {
       showImplicitArguments = true,
       showInferredType = true,
-      serverVersion = "1.2.0",
+      serverVersion = "1.4.1",
       enableSemanticHighlighting = true,
     }
     metals_config.init_options.statusBarProvider = "on"
     metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-    metals_config.on_attach = function(client, bufnr)
+    metals_config.on_attach = function(_, _)
       local dap, dapui = require "dap", require "dapui"
       dap.configurations.scala = {
         {
@@ -68,34 +74,17 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   group = highlight_yank,
 })
 
--- gruvbox theme
---require("gruvbox").setup {
---  terminal_colors = true, -- add neovim terminal colors
---  undercurl = true,
---  underline = true,
---  bold = true,
---  italic = {
---    strings = true,
---    emphasis = true,
---    comments = true,
---    operators = false,
---    folds = true,
---  },
---  strikethrough = true,
---  invert_selection = false,
---  invert_signs = false,
---  invert_tabline = false,
---  invert_intend_guides = false,
---  inverse = true, -- invert background for search, diffs, statuslines and errors
---  contrast = "soft", -- can be "hard", "soft" or empty string
---  palette_overrides = {},
---  overrides = {},
---  dim_inactive = false,
---  transparent_mode = false,
---}
+-- smithy stuff
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*.smithy" },
+  callback = function()
+    vim.cmd "setfiletype smithy"
+  end,
+})
+
 vim.o.background = "dark"
--- vim.cmd "colorscheme gruvbox"
 
 vim.opt.rnu = true
 vim.opt.swapfile = false
 vim.opt.wrap = false
+vim.highlight.priorities.semantic_tokens = 95 -- Or any number lower than 100, treesitter's priority level

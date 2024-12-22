@@ -1,20 +1,4 @@
----@type MappingsTable
 local M = {}
-
-M.disabled = {
-  n = {
-    ["<C-h>"] = "",
-    ["<C-l>"] = "",
-    ["<C-j>"] = "",
-    ["<C-k>"] = "",
-    ["<leader>fw"] = "",
-    ["<tab>"] = "",
-    ["<S-tab>"] = "",
-    ["gd"] = "",
-    ["gD"] = "",
-    ["gi"] = "",
-  },
-}
 
 M.general = {
   n = {
@@ -76,8 +60,14 @@ M.metals = {
       function()
         vim.lsp.buf.rename()
       end,
-      "run the code",
+      "rename the symbol",
     },
+    ["<leader>me"] = {
+      function()
+        require"telescope".extensions.metals.commands()
+      end,
+      "open metals command prompt"
+    }
   },
 }
 
