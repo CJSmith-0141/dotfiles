@@ -1,4 +1,9 @@
-encryption = "gpg"
-[gpg]
-  recipient = "0x2AEE015F2058FAAD"
-  args = ["--quiet"]
+encryption = "age"
+[age]
+command = "rage"
+identity = "{{ .chezmoi.homeDir }}/.chezmoi.key.txt"
+recipient = "age1zm2zfutacqkwkcv6d58zmdxgvuky3z3zd08m44ynkwt9mvyle3esp7y48t"
+
+[merge]
+command = "nvim"
+args = ["-d"]

@@ -1,7 +1,4 @@
-require "nvchad.mappings"
-local M = require "mappings_old"
-
--- add yours here
+local M = require("config.mappings_old")
 
 local map = vim.keymap.set
 
@@ -11,7 +8,7 @@ map("i", "jk", "<ESC>")
 for _, maps in pairs(M) do
   for _, data in pairs(maps) do
     for key, val in pairs(data) do
-      map("n", key, val[1], { desc = val[2]})
+      map("n", key, val[1], { desc = val[2] })
     end
   end
 end
