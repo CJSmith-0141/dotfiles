@@ -12,4 +12,5 @@ for _, maps in pairs(M) do
     end
   end
 end
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+
+map({ "n", "i", "v" }, "<leader>/", "<cmd> w <cr>")

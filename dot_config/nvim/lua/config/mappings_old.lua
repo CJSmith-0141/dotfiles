@@ -77,18 +77,6 @@ M.metals = {
       end,
       "run the code",
     },
-    ["<leader>nn"] = {
-      function()
-        vim.lsp.buf.rename()
-      end,
-      "rename the symbol",
-    },
-    ["<leader>me"] = {
-      function()
-        require("telescope").extensions.metals.commands()
-      end,
-      "open metals command prompt",
-    },
   },
 }
 

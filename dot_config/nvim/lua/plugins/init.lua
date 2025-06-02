@@ -47,18 +47,6 @@ return {
     cmd = "G",
   },
   {
-    "scalameta/nvim-metals",
-    lazy = false,
-    dependencies = {
-      {
-        "nvim-lua/plenary.nvim",
-        "mfussenegger/nvim-dap",
-        "rcarriga/nvim-dap-ui",
-        "nvim-neotest/nvim-nio",
-      },
-    },
-  },
-  {
     "ravibrock/spellwarn.nvim",
     event = "VeryLazy",
     config = true,

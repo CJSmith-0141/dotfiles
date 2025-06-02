@@ -6,7 +6,6 @@ vim.o.background = "dark"
 vim.opt.rnu = true
 vim.opt.swapfile = false
 vim.opt.wrap = false
-vim.highlight.priorities.semantic_tokens = 95 -- Or any number lower than 100, treesitter's priority level
 vim.opt.spell = true
 vim.opt.spelllang = "en_us"
 
